@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hub-hang的个人主页</title>
+    <title>我的小网站</title>
     <style>
+        /* CSS：专门管样子！颜色、布局、按钮样式 */
         * {
             margin: 0;
             padding: 0;
@@ -12,69 +13,76 @@
             font-family: system-ui, sans-serif;
         }
         body {
-            background-color: #f6f8fa;
-            color: #24292f;
-            padding: 40px 20px;
+            background-color: #f4f7fa;
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
         .card {
-            max-width: 600px;
-            margin: 0 auto;
             background: white;
             padding: 40px;
             border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
         }
         h1 {
-            font-size: 32px;
             margin-bottom: 12px;
-        }
-        .subtitle {
-            color: #656d76;
-            font-size: 16px;
-            margin-bottom: 30px;
-        }
-        h2 {
-            font-size: 20px;
-            margin: 28px 0 12px;
-            border-left: 4px solid #2383e2;
-            padding-left:10px;
+            color: #1f2937;
         }
         p {
-            line-height: 1.7;
-            color: #414851;
+            color: #666;
+            margin-bottom: 24px;
+            line-height: 1.6;
         }
-        ul {
-            padding-left:22px;
-            line-height:1.8;
+        .btn {
+            display: inline-block;
+            padding: 12px 26px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+            margin: 6px;
         }
-        a {
-            color:#2383e2;
-            text-decoration:none;
+        .btn:hover {
+            background-color: #1d4ed8;
         }
-        a:hover {
-            text-decoration:underline;
+        #tip {
+            margin-top: 20px;
+            color: #2563eb;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <h1>你好，我是hub-hang</h1>
-        <div class="subtitle">一名大学生｜持续学习中</div>
+        <h1>👋 欢迎来到我的小站</h1>
+        <p>这是我用代码搭建在 GitHub Pages 的第一个网页。<br>试试点击下面的按钮！</p>
 
-        <h2>关于我</h2>
-        <p>Minecraft是我的最爱，平时打羽毛球，性格开朗</p>
+        <!-- 按钮：看得见的元素 -->
+        <button class="btn" id="helloBtn">点我弹出消息</button>
+        <a class="btn" href="https://github.com" target="_blank">去GitHub逛逛</a>
 
-        <h2>我的技能</h2>
-        <ul>
-            <li>虐待大肥鱼</li>
-            <li>哈哈哈</li>
-        </ul>
-
-        <h2>联系方式</h2>
-        <ul>
-            <li>邮箱：fwh182026@outlook.com</li>
-            <li>GitHub：<a href="https://github.com/hub-hang" target="_blank">github.com/weihang</a></li>
-        </ul>
+        <div id="tip"></div>
     </div>
+
+    <script>
+        // JS：专门管交互！点击之后要做什么
+        const btn = document.getElementById('helloBtn');
+        const tipBox = document.getElementById('tip');
+
+        btn.onclick = function() {
+            tipBox.innerText = '✅ 你点击成功啦！代码收到你的操作了';
+        }
+    </script>
 </body>
 </html>
