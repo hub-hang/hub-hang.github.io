@@ -14,7 +14,7 @@
 /* 主题预置：必须在样式解析前执行，避免刷新时闪白。
    想让网站默认浅色，把下面的 'dark' 改成 'light' 即可。 */
 (function(){
-  var DEFAULT_THEME = 'dark';
+  var DEFAULT_THEME = 'light';
   var t = DEFAULT_THEME;
   try{ t = localStorage.getItem('portfolio-theme') || localStorage.getItem('nexus-theme') || DEFAULT_THEME; }catch(e){}
   document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
@@ -362,7 +362,7 @@ const SITE = {
   footerNote: "Powered by imagination",
   skills: ["JavaScript", "Vue", "React", "Python", "TailwindCSS"],
   capabilities: [
-    { title: "前端开发", desc: "Vue / React / Tailwind,实现流畅响应式交互页面。" },
+    { title: "调试网页", desc: "HTML，C++，进行适当优化" },
     { title: "后端开发", desc: "Node / Python,接口开发、简单服务部署。" },
     { title: "UI 动效",   desc: "CSS 动画，微交互，追求 60fps 流畅体验。" }
   ],
@@ -370,8 +370,8 @@ const SITE = {
   // username 一般就是你的 GitHub 用户名，也可以填别人的用户名展示其他仓库
   repos: [
     { username: "hub-hang", repo: "仓库名1", preview: "" },
-    { username: "hub-hang", repo: "仓库名2", preview: "" },
-    { username: "hub-hang", repo: "仓库名3", preview: "" }
+    { username: "none", repo: "仓库名2", preview: "" },
+    { username: "none", repo: "仓库名3", preview: "" }
   ]
 };
 /* ======================= 配置区到此结束 ======================= */
