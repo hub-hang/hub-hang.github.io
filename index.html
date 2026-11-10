@@ -14,7 +14,7 @@
 /* 主题预置：必须在样式解析前执行，避免刷新时闪白。
    想让网站默认浅色，把下面的 'dark' 改成 'light' 即可。 */
 (function(){
-  var DEFAULT_THEME = 'light';
+  var DEFAULT_THEME = 'dark';
   var t = DEFAULT_THEME;
   try{ t = localStorage.getItem('portfolio-theme') || localStorage.getItem('nexus-theme') || DEFAULT_THEME; }catch(e){}
   document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
